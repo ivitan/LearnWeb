@@ -16,8 +16,10 @@
                     SortExpression="读者编号" />
                 <asp:BoundField DataField="图书编号" HeaderText="图书编号" ReadOnly="True" 
                     SortExpression="图书编号" />
-                <asp:BoundField DataField="借书日期" HeaderText="借书日期" SortExpression="借书日期" />
-                <asp:BoundField DataField="还书日期" HeaderText="还书日期" SortExpression="还书日期" />
+                <asp:BoundField DataField="借书日期" HeaderText="借书日期" SortExpression="借书日期" 
+                    DataFormatString="{0:d}" />
+                <asp:BoundField DataField="还书日期" HeaderText="还书日期" SortExpression="还书日期" 
+                    DataFormatString="{0:D}" />
                 <asp:BoundField DataField="是否超期" HeaderText="是否超期" SortExpression="是否超期" />
             </Columns>
         </asp:GridView>

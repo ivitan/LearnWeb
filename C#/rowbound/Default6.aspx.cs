@@ -13,37 +13,53 @@ public partial class Default6 : System.Web.UI.Page
     }
     protected void rowdtbound(object sender, GridViewRowEventArgs e)
     {
-        // Response.Write(e.Row.RowType.ToString()+"<br/>");
+         Response.Write(e.Row.RowType.ToString()+"<br/>");
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
+
 
 
 
             TableCell mytd = e.Row.Cells[2];
             TableCell mytd2 = e.Row.Cells[3];
             TableCell mytd3 = e.Row.Cells[4];
-          
+
             DateTime jieshud = Convert.ToDateTime(mytd.Text);
-            DateTime huanshud = Convert.ToDateTime(mytd2.Text);
-            TimeSpan ts = huanshud -jieshud ;
-            int i = ts.Days;
-            Response.Write(i.ToString()+"<br/>");
-           
 
-           
-
-            if (ts.Days <= 30)
+            if (mytd2.Text == "&nbsp;")
             {
-                mytd3.ForeColor = System.Drawing.Color.DarkGreen;
-                mytd3.Text = "未超期还书";
-            }
+                mytd3.Text = "尚未归还";
+              
 
-            if (ts.Days >30)
-            {
-                mytd3.ForeColor = System.Drawing.Color.Red;
-                mytd3.Text = "已经超期";
+
+
 
             }
+            else
+            {
+               
+
+
+                DateTime huanshud = Convert.ToDateTime(mytd2.Text);
+                TimeSpan ts = huanshud - jieshud;
+                int i = ts.Days;
+
+
+                if (ts.Days <= 30)
+                {
+                    mytd3.ForeColor = System.Drawing.Color.DarkGreen;
+                    mytd3.Text = "未超期还书";
+                }
+
+                if (ts.Days > 30)
+                {
+                    mytd3.ForeColor = System.Drawing.Color.Red;
+                    mytd3.Text = "已经超期";
+
+                }
+
+            }
+           
         }
 
     }
