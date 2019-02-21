@@ -8,7 +8,7 @@
 </head> 
 <body> 
  <div align="center"> 
- <h1>用户登录页面</h1> 
+ <h1>登录页面</h1> 
  <form id="form1" runat="server"> 
   <p> <asp:Label ID="lbusername" runat="server">用户名：</asp:Label> 
    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> 
