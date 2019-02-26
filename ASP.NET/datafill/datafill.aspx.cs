@@ -23,6 +23,7 @@ public partial class datafill : System.Web.UI.Page
 
         string tiaojian1 = DropDownList1.SelectedValue.ToString();
         string tiaojian2 = DropDownList2.SelectedValue.ToString();
+        //string tiaojian3 = DropDownList3.SelectedValue.ToString();
         // Panel _panl; 
         _td = new TableCell();
         _td.Text = "学生学号";
@@ -67,6 +68,12 @@ public partial class datafill : System.Web.UI.Page
         cnn = new OleDbConnection(str_conn);
         cnn.Open();
         str_sql = "select * from 成绩实例 where 学生籍贯='" + tiaojian1 + "' and 性别='" + tiaojian2 + "'";
+        /*
+        string str_sql1 = "select * from 成绩实例 where 学生籍贯='" + tiaojian1 + "' and 性别='" + tiaojian2 + "'";
+        string str_sql2 = "select * from 成绩实例 where 学生籍贯='" + tiaojian1 + "' or 性别='" + tiaojian2 + "'";
+        if (tiaojian3 == "与") { str_sql = str_sql1; };
+        if (tiaojian3 == "或") { str_sql = str_sql2; };
+        */
         cmd = new OleDbCommand(str_sql, cnn);
         datar = cmd.ExecuteReader();
         while (datar.Read())
