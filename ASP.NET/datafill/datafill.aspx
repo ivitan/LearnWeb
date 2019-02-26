@@ -51,6 +51,11 @@
                 <asp:ListItem>男</asp:ListItem>
                 <asp:ListItem>女</asp:ListItem>
             </asp:DropDownList>
+            请选查询条件：
+            <asp:DropDownList ID="DropDownList3" runat="server">
+                <asp:ListItem>与</asp:ListItem>
+                <asp:ListItem>或</asp:ListItem>
+            </asp:DropDownList>
             <asp:Button ID="Button1" runat="server" Text="查   询" OnClick="Button1_Click" />
         </asp:Panel>
         <hr />
