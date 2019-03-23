@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <script src="../jQuery/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="../jQuery/jquery-1.8.3.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#tabfirst li").each(function (index) {
