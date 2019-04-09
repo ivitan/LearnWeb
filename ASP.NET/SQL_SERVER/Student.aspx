@@ -26,10 +26,10 @@
                 Type="Integer" ErrorMessage="年龄为12——80之间的整数" ControlToValidate="TextBox3" Display="Dynamic"
                 SetFocusOnError="True" ValidationGroup="r_inserte" ForeColor="Red"></asp:RangeValidator>&nbsp&nbsp&nbsp&nbsp
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2"
-                DataTextField="所在系" DataValueField="所在系" AppendDataBoundItems="true">
+                DataTextField="所在系" DataValueField="所在系" AppendDataBoundItems="True">
                 <asp:ListItem Value="xuanze">--请选择所在系--</asp:ListItem>
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:libnewConnectionString3 %>"
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:libnewConnectionString4 %>"
                 SelectCommand="SELECT distinct [所在系] FROM [s]"></asp:SqlDataSource>
             <br />
             <br />

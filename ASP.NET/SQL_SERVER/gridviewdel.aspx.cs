@@ -23,7 +23,7 @@ public partial class gridviewdel : System.Web.UI.Page
         //实例化SqlConnection对象
         SqlConnection sqlCon = new SqlConnection();
         //实例化SqlConnection对象连接数据库的字符串
-        sqlCon.ConnectionString = "server=S404-30\\SQLEXPRESS;uid=sa;pwd=123456;database=libnew";
+        sqlCon.ConnectionString = "server=S404-27\\SQLEXPRESS;uid=sa;pwd=123456;database=libnew";
         return sqlCon;
     }
     public void GridViewBind()

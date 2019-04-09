@@ -115,14 +115,14 @@
     <form id="form1" runat="server">
     <div>
         <div id="banner">
-            <p>科学管理，高效管理</p>
+            <p>www.vitan.me</p>
         </div>
         <div id="navdiv">
             <ul id="nav">
                 <li class="first"><a href="#">首页</a></li>
                 <li class="first"><a href="studentinf.aspx">学生信息</a></li>
-                <li class="first"><a href="courseinf.aspx">学生信息</a></li>
-                <li class="first"><a href="sc.aspx">学生信息</a></li>
+                <li class="first"><a href="courseinf.aspx">课程信息</a></li>
+                <li class="first"><a href="sc.aspx">选课情况</a></li>
                 <li class="first"><a href="#">编辑学生信息</a>
                     <ul>
                         <li class="second"><a href="Student.aspx">新增</a></li>
