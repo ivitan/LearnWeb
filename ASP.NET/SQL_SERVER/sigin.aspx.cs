@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 
+
 public partial class SQL_SERVER_sigin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -17,7 +18,7 @@ public partial class SQL_SERVER_sigin : System.Web.UI.Page
         string str = "server=VITAN;database=asmin;uid=sa;pwd=123456;Trusted_Connection=no";
         SqlConnection conn = new SqlConnection(str);
         conn.Open();
-        string sql = "select * from userInfo where userName=@userName and password=@password";
+        string sql = "select * from userInfo where user=@userName and password=@password";
         SqlCommand comm = new SqlCommand(sql, conn);
         comm.Parameters.Add("userName", TextBox1.Text);
         comm.Parameters.Add("password", TextBox2.Text);

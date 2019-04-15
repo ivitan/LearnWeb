@@ -9,7 +9,7 @@ using System.Data;
 
 public partial class SQL_SERVER_addclass : System.Web.UI.Page
 {
-    SqlConnection sqlconn = new SqlConnection("server=S404-27\\SQLEXPRESS;uid=sa;pwd=123456;database=libnew");
+    SqlConnection sqlconn = new SqlConnection("server=VITAN;uid=sa;pwd=123456;database=libnew");
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -90,7 +90,7 @@ public partial class SQL_SERVER_addclass : System.Web.UI.Page
     }
     protected void GridViewDataBind()
     {
-        SqlConnection sqlconn = new SqlConnection("server=S404-27\\SQLEXPRESS;uid=sa;pwd=123456;database=libnew");
+        SqlConnection sqlconn = new SqlConnection("server=VITAN;uid=sa;pwd=123456;database=libnew");
 
         string sqltext = "select * from c";
         SqlCommand cmd = new SqlCommand(sqltext, sqlconn);

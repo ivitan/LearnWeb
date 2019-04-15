@@ -3,32 +3,32 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
       <style type="text/css">
-        #DataList1 img
-        {
-            width:200px;
-            height:230px;
-            border:1px solid #eaeaea;
-            padding:2px;
-            margin-left:20px;
-            margin-right:10px;
-            
-            
-            
-            }#DataList1 tr{
+          #DataList1 img {
+              width: 200px;
+              height: 230px;
+              border: 1px solid #eaeaea;
+              padding: 2px;
+              margin-right: 10px;
+              border-radius:5px;
+          }
+     
+            #DataList1 tr{
             border-bottom:1px solid #eeaadd;
             margin-bottom:5px;
             
             }
             
-            #DataList1 tr td
+            .first
             {color:#666;
              font-family:微软雅黑;
              font-size:12px;
              padding:5px;
+             padding-left:10px;
              
                 }
-         #DataList1 tr td:hover
+         .first:hover
          {  background:#efefe1;
+            border-radius:5px;
              }
     </style>
 
@@ -42,7 +42,12 @@
                         OnItemCommand="DataList1_ItemCommand" RepeatColumns="2" OnItemDataBound="DataList1_ItemDataBound"
                         RepeatDirection="Horizontal">
                         <ItemTemplate>
-                            <table>
+                            <table class="first">
+                                <tr>
+                                    <td>
+                                        <asp:Image ID="image1" runat="server" ImageUrl='<%# Eval("照片","images/{0}") %>' />
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>
                                         学号：<asp:Label ID="lblStuID" runat="server" Text='<%# Eval("学号") %>'></asp:Label>
@@ -68,11 +73,6 @@
                                 <tr>
                                     <td>
                                         所在系：<asp:Label ID="lblstuHobby" runat="server" Text='<%# Eval("所在系") %>'></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Image ID="image1" runat="server" ImageUrl='<%# Eval("照片") %>' />
                                     </td>
                                 </tr>
                                 <tr>

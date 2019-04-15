@@ -25,7 +25,7 @@ public partial class _Default : System.Web.UI.Page
         //实例化SqlConnection对象
         SqlConnection sqlCon = new SqlConnection();
         //实例化SqlConnection对象连接数据库的字符串
-        sqlCon.ConnectionString = "server=S404-61\\SQLEXPRESS;uid=sa;pwd=123456;database=libnew";
+        sqlCon.ConnectionString = "server=VITAN;uid=sa;pwd=123456;database=libnew";
         //定义SQL语句
         string SqlStr = "select * from s order by 学号";
         //实例化SqlDataAdapter对象

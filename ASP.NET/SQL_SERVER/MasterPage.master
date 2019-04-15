@@ -122,7 +122,7 @@
             <ul id="nav">
                 <li class="first"><a href="#">首页</a></li>
                 <li class="first"><a href="Student.aspx">学生信息</a></li>
-                <li class="first"><a href="courseinf.aspx">课程信息</a></li>
+                <li class="first"><a href="scdit.aspx">课程信息</a></li>
                 <li class="first"><a href="showanddit.aspx">选课情况</a></li>
                 <li class="first"><a href="#">编辑学生信息</a>
                     <ul>
@@ -141,7 +141,7 @@
                 <li class="first"><a href="#">编辑选课信息</a>
                     <ul>
                         <li class="second"><a href="addclass.aspx">新增</a></li>
-                        <li class="second"><a href="classdit.aspx">修改</a></li>
+                        <li class="second"><a href="scdit.aspx">修改</a></li>
                         <li class="second"><a href="classdel.aspx">删除</a></li>
                     </ul>
                 </li>
@@ -154,7 +154,7 @@
             </asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <p style="margin: 10px; color: #777; font-family: 微软雅黑;">
+                    <p style="margin: 10px; color: #777; font-family: 微软雅黑;text-align:center">
                         欢迎登录学生成绩管理系统。现在时间：<%=DateTime.Now.ToLongTimeString() %></p>
                     <asp:Timer ID="Timer1" runat="server" Interval="1000">
                     </asp:Timer>

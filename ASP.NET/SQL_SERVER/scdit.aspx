@@ -1,16 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SQL_SERVER/MasterPage.master" AutoEventWireup="true" CodeFile="scdit.aspx.cs" Inherits="SQL_SERVER_scdit" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style>
+        #content {
+            text-align: center;
+        }
+    </style>
+
+    </script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<div id="content">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div id="content">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowPaging="true"
             PageSize="5" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing"
             OnRowUpdating="GridView1_RowUpdating" OnPageIndexChanging="GridView1_PageIndexChanging">
             <Columns>
                 <asp:BoundField DataField="Sno" HeaderText="Sno" ReadOnly="True" SortExpression="Sno" />
                 <asp:BoundField DataField="Cno" HeaderText="Cno" SortExpression="Cno" />
-                <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
+                <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade"   />
                 <asp:CommandField ShowEditButton="True" />
             </Columns>
             <PagerTemplate>
