@@ -32,7 +32,7 @@
         }
         #box
         {
-            background-image: url(img/b1.gif);
+            background-color:antiquewhite;
             box-shadow: 5px 5px 2px #ccc;
         }
         #banner
@@ -45,11 +45,12 @@
         }
         #banner p
         {
-            font-family: 华文中宋;
+            font-family: 微软雅黑;
             font-size: 48px;
             color: White;
             margin-left: 5px;
             margin-top: 40px;
+            text-align:center;
         }
         #navdiv
         {
@@ -59,7 +60,7 @@
         {
             padding-top: 5px;
             padding-bottom: 5px;
-            background-image: url(img/beijing4.jpg);
+            background-color:azure;
             background-repeat: repeat-x;
         }
         #nav .first
@@ -81,7 +82,7 @@
         .first a:hover
         {
             text-decoration: none;
-            color: #eee;
+            color: #f40;
         }
         #nav li ul
         {
@@ -97,14 +98,14 @@
             list-style: none;
             margin-bottom: 1px;
             padding: 10px 10px 10px 10px;
-            background-image: url(img/beijing6.jpg);
+            background-color:azure;
             background-repeat: repeat-x;
             font-size: 14px;
             font-family: 微软雅黑;
         }
         #nav li ul li:hover
         {
-            background-image: url(img/beijing5.jpg);
+            background-color:azure;
             box-shadow: 2px 3px 1px #cc3366;
         }
     </style>
@@ -120,28 +121,28 @@
         <div id="navdiv">
             <ul id="nav">
                 <li class="first"><a href="#">首页</a></li>
-                <li class="first"><a href="studentinf.aspx">学生信息</a></li>
+                <li class="first"><a href="Student.aspx">学生信息</a></li>
                 <li class="first"><a href="courseinf.aspx">课程信息</a></li>
-                <li class="first"><a href="sc.aspx">选课情况</a></li>
+                <li class="first"><a href="showanddit.aspx">选课情况</a></li>
                 <li class="first"><a href="#">编辑学生信息</a>
                     <ul>
                         <li class="second"><a href="Student.aspx">新增</a></li>
-                        <li class="second"><a href="#">修改</a></li>
+                        <li class="second"><a href="studentdit.aspx">修改</a></li>
                         <li class="second"><a href="#">删除</a></li>
                     </ul>
                 </li>
                 <li class="first"><a href="#">编辑课程信息</a>
                     <ul>
-                        <li class="second"><a href="#">新增</a></li>
-                        <li class="second"><a href="#">修改</a></li>
-                        <li class="second"><a href="#">删除</a></li>
+                        <li class="second"><a href="addclass.aspx">新增</a></li>
+                        <li class="second"><a href="classdit.aspx">修改</a></li>
+                        <li class="second"><a href="classdel.aspx">删除</a></li>
                     </ul>
                 </li>
                 <li class="first"><a href="#">编辑选课信息</a>
                     <ul>
-                        <li class="second"><a href="#">新增</a></li>
-                        <li class="second"><a href="#">修改</a></li>
-                        <li class="second"><a href="#">删除</a></li>
+                        <li class="second"><a href="addclass.aspx">新增</a></li>
+                        <li class="second"><a href="classdit.aspx">修改</a></li>
+                        <li class="second"><a href="classdel.aspx">删除</a></li>
                     </ul>
                 </li>
                 <li class="first" id="last"><a href="#">联系我们</a></li>
