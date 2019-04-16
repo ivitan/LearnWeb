@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SQL_SERVER/MasterPage.master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" Debug="true" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
     CodeFile="showanddit.aspx.cs" Inherits="SQL_SERVER_showanddit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
@@ -77,7 +77,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href='editrecord.aspx?xuehao=<%#Eval("学号")%>' target="_blank">编辑</a>
+                                        <a href='stu_dit.aspx?xuehao=<%#Eval("学号")%>' target="_blank">编辑</a>
                                     </td>
                                 </tr>
                             </table>
