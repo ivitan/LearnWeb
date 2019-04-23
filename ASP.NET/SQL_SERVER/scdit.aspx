@@ -6,7 +6,14 @@
             text-align: center;
         }
     </style>
-
+    <script type="text/javascript">
+        var text = document.getElementById("#content grade");
+        text.onkeyup = function () {
+            this.value = this.value.replace(/\D/g, '');
+            if (text.value > 100) {
+                text.value = 100;
+            }
+        }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -17,7 +24,7 @@
             <Columns>
                 <asp:BoundField DataField="Sno" HeaderText="Sno" ReadOnly="True" SortExpression="Sno" />
                 <asp:BoundField DataField="Cno" HeaderText="Cno" SortExpression="Cno" />
-                <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade"   />
+                <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" ControlStyle-CssClass="grade" />
                 <asp:CommandField ShowEditButton="True" />
             </Columns>
             <PagerTemplate>

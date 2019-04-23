@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" Debug="true" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
+﻿<%@ Page Title="" Debug="true" Language="C#" MasterPageFile="~/SQL_SERVER/MasterPage.master" AutoEventWireup="true"
     CodeFile="showanddit.aspx.cs" Inherits="SQL_SERVER_showanddit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">

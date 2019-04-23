@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="stu_dit.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SQL_SERVER/MasterPage.master" AutoEventWireup="true" CodeFile="stu_dit.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <script src="jquery-1.8.3.js" type="text/javascript"></script>
@@ -104,10 +104,10 @@
             <p>
                 <span>请选择该生的所在系：</span></p>
             <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1"
-                DataTextField="所在系" DataValueField="所在系" AppendDataBoundItems="true">
+                DataTextField="所在系" DataValueField="所在系" AppendDataBoundItems="True">
                 <asp:ListItem Value="null">—请选择系别—</asp:ListItem>
             </asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:libnewConnectionString8 %>"
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:libnewConnectionString4 %>"
                 SelectCommand="SELECT distinct [所在系] FROM [s]"></asp:SqlDataSource>
         </div>
         <div id="rightinf" class="left">
