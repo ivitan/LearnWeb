@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4-3</title>
+    <script src="jquery-1.8.3.js"></script>
+   <script>
+       $(document).ready(function(){
+           $(document.body).click(function(){
+            $("div").each(function(i){
+                if(this.style.color !="blue"){
+                    this.style.color="blue";
+                }else{
+                    this.style.color="";
+                }
+            });
+           });           
+       });
+   </script> 
+</head>
+<body>
+    <div>北京</div>
+    <div>上海</div>
+    <div>广州</div>
+</body>
+</html>

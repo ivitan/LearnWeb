@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4-15</title>
+    <script src="jquery-1.8.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $('<p>jQuery</p>').insertAfter('.inner');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="inner">Hello</div>
+        <div class="inner">World</div>
+    </div>
+    <button>插入</button>
+</body>
+</html>

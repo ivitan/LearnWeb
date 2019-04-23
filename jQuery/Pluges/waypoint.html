@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5-9waypoint</title>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/waypoints.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#artile').waypoint(function(direction){
+					if(direction=='down')
+					 	alert("Bye");
+					if(direction=="up")
+						alert("Welcome");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="artile">
+			<p>
+				Hello Word“Hello, world"程序是指在计算机屏幕上输出“Hello,world”这行字符串的计算机程序，“hello, 
+				world”的中文意思是“你好，世界。”。这个例程在Brian Kernighan 和Dennis M. Ritchie合著的《The C Programme Language》
+				使用而广泛流行。因为它的简洁，实用，并包含了一个该版本的C程序首次在1974年Brian Kernighan所撰写的《Programming in C: A Tutorial》出现
+			</p>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<p>最初的"hello, world"打印内容有个标准，即全小写，有逗号，逗号后空一格，且无感叹号。不过沿用至今，完全遵循传统标准形式的反而很少出现。
+</p>
+		</div>
+	</body>
+</html>

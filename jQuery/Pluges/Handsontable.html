@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Handsontable</title>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.handsontable.js"></script>
+		<script type="text/javascript" src="js/jquery.contextMenu.js"></script>
+		<link rel="stylesheet" href="css/jquery.handsontable.css" />
+		<link rel="stylesheet" media="screen" href="css/jquery.contextMenu.css" />
+		<script>
+			$(document).ready(function() {
+				$("#grid").handsontable({
+					rows: 5,
+					cols: 5,
+					minSpareCols: 0, //always keep at least 1 spare row at the right
+					minSpareRows: 0, //always keep at least 1 spare row at the bottom
+					autoWrapRow: true,
+					colHeaders: ["姓名", "性别", "年龄", "部门", "职务"],
+					rowHeaders: true,
+					contextMenu: true
+				});
+
+				var data = [
+					["张三", "男", 41, "人事部", "经理"],
+					["李四", "男", 21, "人事部", "职员"],
+					["王五", "男", 31, "人事部", "职员"]
+				];
+
+				$("#grid").handsontable("loadData", data);
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="grid" class="dataTable"></div>
+	</body>
+
+</html>

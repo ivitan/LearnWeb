@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4-11</title>
+    <script src="jquery-1.8.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            var trs=$("#employee").find("tr");
+            for(var i=0;i<trs.length;i++){
+                var td=$(trs[i]).find('td:nth-child(3)');
+                if(td.html()=="男"){
+                    td.html('<img src="ivitan.png" width="100" heigth=“100" />')
+                }
+                else if($(td).html()=='女'){
+                    td.html('<img src="ivitan.png" width="50" heigth=“50" />')
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <table id="employee" width="200" border="1">
+        <tr>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>学历</td>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>张三</td>
+            <td>女</td>
+            <td>29</td>
+            <td>大专</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>李四</td>
+            <td>男</td>
+            <td>30</td>
+            <td>中专</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>王五</td>
+            <td>女</td>
+            <td>25</td>
+            <td>本科</td>
+        </tr>
+    </table>
+</body>
+</html>

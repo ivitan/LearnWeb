@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4-2</title>
+    <script src="jquery-1.8.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a").click(function(){
+                alert($("a").get(0).innerText);
+            });
+        });
+    </script>
+</head>
+<body>
+    <a id="a">aa</a><br>
+    <a id="b">bb</a><br>
+    <a id="c">cc</a>
+</body>
+</html>
