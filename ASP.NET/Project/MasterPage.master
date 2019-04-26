@@ -115,7 +115,6 @@
     <form id="form1" runat="server">
     <div>
         <div id="banner">
-            ;
             <p>科学管理，高效管理</p>
         </div>
         <div id="navdiv">

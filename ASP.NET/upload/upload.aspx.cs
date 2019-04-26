@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 
-public partial class _Default : System.Web.UI.Page 
+public partial class _Default: System.Web.UI.Page 
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -56,7 +56,7 @@ public partial class _Default : System.Web.UI.Page
                     string name = this.FileUpload1.PostedFile.FileName;
 
                     SqlConnection sqlCon = new SqlConnection();
-                    sqlCon.ConnectionString = "server=S404-27\\SQLEXPRESS;uid=sa;pwd=123456;database=libnew";
+                    sqlCon.ConnectionString = "server=VITAN;uid=sa;pwd=123456;database=libnew";
                     sqlCon.Open();
                     string SqlStr = "insert into photo(编号,照片名称) values ('"+ pid + "','" + name + "')";
                     SqlCommand sqlcom = new SqlCommand(SqlStr, sqlCon);

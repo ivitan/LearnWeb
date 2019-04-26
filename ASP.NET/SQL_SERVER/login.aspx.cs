@@ -9,7 +9,6 @@ using System.Data.SqlClient;
 
 public partial class SQL_SERVER_sigin : System.Web.UI.Page
 {
-    SqlConnection sqlconn = new SqlConnection("server=VITAN;uid=sa;pwd=123456;database=libnew");
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -20,23 +19,21 @@ public partial class SQL_SERVER_sigin : System.Web.UI.Page
         string paswd = pwd.Text;
         string name = "";
         string mima = "";
-        string reader = "";
 
-        string sqlstr = "select * from [user] where user='" + user + "'and pw='" + paswd + "'";
-
-        sqlconn.Open();
-        SqlCommand cmd = new SqlCommand(sqlstr, sqlconn);
-        SqlDataReader datar = cmd.ExecuteReader();
-
+        SqlConnection sqlCon = new SqlConnection();
+        sqlCon.ConnectionString = "server=VITAN;uid=sa;pwd=123456;database=libnew";
+        string SqlStr = "select * from [user] where user='" + user + "'and pw='" + paswd + "'";
+        sqlCon.Open();
+        SqlCommand sqlcom = new SqlCommand(SqlStr, sqlCon);
+        int i = sqlcom.ExecuteNonQuery();
+        SqlDataReader datar = sqlcom.ExecuteReader();
+       
         while (datar.Read())
         {
             name = datar["user"].ToString();
             mima = datar["pw"].ToString();
-            //reader = datar["读者类型"].ToString();
         }
-        sqlconn.Close();
-
-        if (name != "" && mima != "")
+           if (name != "" && mima != "")
         {
             Response.Redirect("Student.aspx");
         }
@@ -44,5 +41,6 @@ public partial class SQL_SERVER_sigin : System.Web.UI.Page
         {
             Response.Write("<script>alert('用户名或密码错误，请重新登录')</script>");
         }
+        sqlCon.Close();
     }
 }

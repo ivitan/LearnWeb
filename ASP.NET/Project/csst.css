@@ -1,0 +1,42 @@
+﻿ <style>
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        #faded
+        {
+            width: 250px;
+            height: 250px;
+            float:left;
+            position: relative;
+            overflow: hidden;
+        }
+        #faded .rap
+        {
+            width: 600px;
+            height: 250px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        #faded .rap img
+        {
+            width: 250px;
+            height: 250px;
+        }
+        #faded .rap li
+        {
+            float: left;
+        }
+        #jieshao
+        {
+            float:right;
+            }
+        #jieshao img
+        {
+            width:100px;
+            height:100px;
+            
+    </style>
