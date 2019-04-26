@@ -12,7 +12,7 @@
         <header class="header">
      <nav>
     <ul>
-    <li class="logo"><a href="#">东山小树</a></li>
+    <li class="logo"><a href="#">Vitan</a></li>
     <li><a href="#">侧栏菜单</a></li>
     <li><a href="#">图片</a></li>
     <li><a href="#">音乐</a></li>
@@ -24,9 +24,9 @@
     <div class="line"></div>
     <h1>东山小树</h1>
      <div class="line"></div>
-     <p>Email:2439119612@qq.com</p>
-     <p>信息技术与工程学院：黄灿辉老师</p>
-     <p>信息系统分析与设计主讲</p>
+     <p>Email:xxx@xx.com</p>
+     <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+     <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
         <asp:Button ID="Button1" runat="server" Text="别摸我" />
         <div class="more">更多</div>
     </div>
@@ -160,8 +160,8 @@
             <li>星期五</li>
         </ul>
         <div  class="copy">
-            &copy 米卡船长2017-12
-            <a href="../苏宁易购/index.html">苏宁链接</a>
+            &copy 2019
+            <a href="vitan.me">Vitan</a>
         </div>
 
     </footer>
