@@ -1,64 +1,114 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="UTF-8">
-	<title>WookMark</title>
-	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
-	<script type="text/javascript" src="js/jquery.wookmark.js"></script>
-	<link rel="stylesheet" href="css/style3.css" />
-	<script type="text/javascript">
-		$(function ($) {
-			var handler = $('#tiles li');
-			handler.wookmark({
-				// Prepare layout options.
-				autoResize: true, // This will auto-update the layout when the browser window is resized.
-				container: $('#main'), // Optional, used for some extra CSS styling
-				offset: 5, // Optional, the distance between grid items
-				outerOffset: 10, // Optional, the distance to the containers border
-				itemWidth: 210 // Optional, the width of a grid item
-			});
+	<head>
+		<meta charset="UTF-8">
+		<title>WookMark</title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/jquery.wookmark.js"></script>
+		<link rel="stylesheet" href="css/style3.css" />
+		<script type="text/javascript">
+			$(function($) {
+				var handler = $('#tiles li');
+				handler.wookmark({
+					// Prepare layout options.
+					autoResize: true, // This will auto-update the layout when the browser window is resized.
+					container: $('#main'), // Optional, used for some extra CSS styling
+					offset: 5, // Optional, the distance between grid items
+					outerOffset: 10, // Optional, the distance to the containers border
+					itemWidth: 210 // Optional, the width of a grid item
+				});
 
-			// Capture clicks on grid items.
-			handler.click(function () {
-				// Randomize the height of the clicked item.
-				var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
-				$(this).css('height', newHeight + 'px');
+				// Capture clicks on grid items.
+				handler.click(function() {
+					// Randomize the height of the clicked item.
+					var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
+					$(this).css('height', newHeight + 'px');
 
-				// Update the layout.
-				handler.wookmark();
-			});
-		})(jQuery);
-	</script>
+					// Update the layout.
+					handler.wookmark();
+				});
+			})(jQuery);
+		</script>
 	</head>
+
 	<body>
 		<div id="main">
-		<ul id="tiles">
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>1</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>2</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>3</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>4</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>5</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>6</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>7</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>8</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>9</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>10</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>11</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>12</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>13</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>14</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>15</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>16</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>17</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>18</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>19</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>20</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>21</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>22</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>23</p></li>
-			<li><img src="img/ivitan.png" width="200" height="200"/><p>24</p></li>
-		</ul>
+			<ul id="tiles">
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>1</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>2</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>3</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>4</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>5</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>6</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>7</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>8</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>9</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>10</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>11</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>12</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>13</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>14</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>15</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>16</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>17</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>18</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>19</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>20</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>21</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>22</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>23</p>
+				</li>
+				<li><img src="img/ivitan.png" width="200" height="200" />
+					<p>24</p>
+				</li>
+			</ul>
 		</div>
 	</body>
+
 </html>

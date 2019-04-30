@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/css1.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/jquery.jeditable.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.edit').editable('http://www.example.com/save.php', {
+					indicator: '保存中...',
+					tooltip: '单击编辑...'
+				});
+				$('.edit_area').editable('http://www.example.com/save.php', {
+					type: 'textarea',
+					cancel: '取消',
+					submit: '确定',
+					tooltip: '单击编辑...'
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="edit" id="div_1">就地编辑插件jeditable</div>
+		<div class="edit_area" id="div_2">jeditable是一个jquery插件，它的优点是可以就地编辑，并且提交到服务器处理。</div>
+	</body>
+
+</html>

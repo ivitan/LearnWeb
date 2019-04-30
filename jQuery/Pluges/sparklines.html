@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>SparkLine</title>
-		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
-		<script type="text/javascript" src="js/jquery.sparkline.js" ></script>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/jquery.sparkline.js"></script>
 		<script type="text/javascript">
-			$(function(){
+			$(function() {
 				/*没有参数，则用 span 元素的内容绘制统计图*/
 				$('.inlinesparkline').sparkline();
-				
+
 				/*使用数组来制定绘制统计图表的数据*/
-				var myvalue = [10,9,5,6,4,4,1];
+				var myvalue = [10, 9, 5, 6, 4, 4, 1];
 				$('.dynamicbar').sparkline(myvalue);
-				
+
 				/*绘制绿色的柱状图*/
-				$('.dynamicbar').sparkline(myvalue,{type:'bar',barColor:'green',width:'100px',height:'100px'});
-				
-			/*‘html指定使用 span 元素的内容绘制统计图表*/
-			$('.inlinebar').sparkline('html',{type:'pie',width:'100px',height:'100px'});
+				$('.dynamicbar').sparkline(myvalue, {
+					type: 'bar',
+					barColor: 'green',
+					width: '100px',
+					height: '100px'
+				});
+
+				/*‘html指定使用 span 元素的内容绘制统计图表*/
+				$('.inlinebar').sparkline('html', {
+					type: 'pie',
+					width: '100px',
+					height: '100px'
+				});
 			});
 		</script>
 	</head>
+
 	<body>
 		<p>曲线图: <span class="inlinesparkline">1,2,4,7,5,9,10</span></p>
 		<p>柱状图: <span class="dynamicbar">Loading...</span></p>
 		<p>饼图: <span class="inlinebar">1,3,4,5,3,5</span></p>
 	</body>
+
 </html>
