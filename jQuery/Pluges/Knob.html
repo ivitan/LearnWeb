@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Knob</title>
+		<link rel="stylesheet" href="css/css2.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/jquery.knob-1.0.1.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".knob").knob({
+					max: 940,
+					min: 300,
+					thickness: .3,
+					fgColor: '#2B99E6',
+					bgColor: '#303030',
+					'release': function(e) {
+						$('#img').animate({
+							width: e
+						});
+					}
+				});
+
+				$(".knob2").knob({
+					'release': function(e) {
+						$('#img').animate({
+							width: e
+						});
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<h1>GBin1 jQuery Knob Demo</h1>
+		</header>
+		<div id="container">
+			<div id="imgwrapper">
+				<img id="img" src="img/ivitan.png" />
+			</div>
+			<div id="knobwrapper">
+				<input class="knob" data-width="300" data-skin="tron" data-displayInput="true" value="200">
+				<div>
+					<input class="knob2" data-width="150" data-fgColor="green" data-bgColor="#303030" data-skin="tron" data-thickness=".3" data-min="200" data-max="600" value="100">
+				</div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+	</body>
+
+</html>

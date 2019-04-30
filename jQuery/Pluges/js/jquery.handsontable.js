@@ -2019,6 +2019,7 @@ var Handsontable = { //class namespace
           "redo": {name: "Redo", disabled: function () {
             return priv.undoRedo ? !priv.undoRedo.isRedoAvailable() : true
           }},
+          "sep1": "---------",
           "row_above": {name: "在上方插入行", disabled: isDisabled},
           "row_below": {name: "在下方插入行", disabled: isDisabled},
           "sep2": "---------",
