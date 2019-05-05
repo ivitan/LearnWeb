@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 
-public partial class _Default: System.Web.UI.Page 
+public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -25,7 +25,7 @@ public partial class _Default: System.Web.UI.Page
         {
             //获取上传文件的后缀
             String fileExtension = System.IO.Path.GetExtension(this.FileUpload1.FileName).ToLower();
-            String[] restrictExtension ={ ".gif",".jpg",".bmp",".png"};
+            String[] restrictExtension = { ".gif", ".jpg", ".bmp", ".png" };
             string pid = TextBox1.Text;
 
             //判断文件类型是否符合要求
@@ -33,17 +33,17 @@ public partial class _Default: System.Web.UI.Page
             {
                 if (fileExtension == restrictExtension[i])
                 {
-                    fileIsValid = true; 
-                
+                    fileIsValid = true;
+
                 }
-            
+
             }
             //如果文件类型符合要求,调用SaveAs方法实现上传,并显示相关信息
             if (fileIsValid == true)
             {
                 try
                 {
-                   // this.Image1.ImageUrl ="~/images/"+ FileUpload1.FileName;
+                    // this.Image1.ImageUrl ="~/images/"+ FileUpload1.FileName;
                     this.FileUpload1.SaveAs(Server.MapPath("~/images/") + FileUpload1.FileName);
                     this.Label1.Text = "文件上传成功";
                     this.Label1.Text += "<Br/>";
@@ -58,9 +58,9 @@ public partial class _Default: System.Web.UI.Page
                     SqlConnection sqlCon = new SqlConnection();
                     sqlCon.ConnectionString = "server=VITAN;uid=sa;pwd=123456;database=libnew";
                     sqlCon.Open();
-                    string SqlStr = "insert into photo(编号,照片名称) values ('"+ pid + "','" + name + "')";
+                    string SqlStr = "insert into photo(编号,照片名称) values ('" + pid + "','" + name + "')";
                     SqlCommand sqlcom = new SqlCommand(SqlStr, sqlCon);
-                    int i = sqlcom.ExecuteNonQuery(); 
+                    int i = sqlcom.ExecuteNonQuery();
                     sqlCon.Close();
                 }
                 catch
@@ -70,18 +70,18 @@ public partial class _Default: System.Web.UI.Page
                 }
                 finally
                 {
-                   
-                
+
+
                 }
             }
-            else 
+            else
             {
-            this.Label1.Text ="只能够上传后缀为.gif,.jpg,.bmp,.png的文件";
-            
-            }
-            
-         }
+                this.Label1.Text = "只能够上传后缀为.gif,.jpg,.bmp,.png的文件";
 
-     }
+            }
+
+        }
+
+    }
 }
 

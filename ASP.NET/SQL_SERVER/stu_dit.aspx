@@ -1,12 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SQL_SERVER/MasterPage.master" AutoEventWireup="true" CodeFile="stu_dit.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SQL_SERVER/MasterPage.master" AutoEventWireup="true"
+    CodeFile="stu_dit.aspx.cs" Inherits="_Default" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script src="jquery-1.8.3.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#ContentPlaceHolder1_ListBox2").change(function () {
                 var url = "images/";
-                $("#ContentPlaceHolder1_Image1").attr("src", url+$(this).val());
+                $("#ContentPlaceHolder1_Image1").attr("src", url + $(this).val());
             });
             $("#ContentPlaceHolder1_Button1").click(function () {
                 var sextext = $("#ContentPlaceHolder1_DropDownList1").find("option:selected").text();
@@ -22,8 +23,21 @@
                     alert("尚未选择照片");
 
             });
-        }); 
+        });
     </script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $("#ContentPlaceHolder1_FileUpload1").val(""); //防止后退键重复提交
+
+         });
+         function checkSize(obj_file) {
+             var _size = obj_file.files[0].size; //获取上传文件大小
+             if (_size > 8000000) {
+                 alert("超过8M"); //限制上传文件大小
+                 $(obj_file).focus();
+             }
+         }
+        </script>
     <style type="text/css">
         #main
         {
@@ -33,35 +47,41 @@
             padding: 5px;
             border: 1px solid #ccc;
         }
+        
         span
         {
             font-size: 14px;
             color: #666;
             font-family: 微软雅黑;
         }
+        
         .tupian
         {
             width: 160px;
             height: 200px;
             border: 5px solid #99cccc;
         }
+        
         .left
         {
             float: left;
             padding: 10px;
             margin: 10px;
         }
+        
         #leftinf
         {
             width: 300px;
             border: 1px solid #fff;
             height: 400px;
         }
+        
         #rightinf
         {
             width: 250px;
             border: 1px solid #fff;
         }
+        
         .anniu
         {
             background-image: url(o_04.gif);
@@ -72,19 +92,26 @@
             float: left;
             margin-right: 20px;
         }
+        
         .anniu:hover
         {
             background-image: url(o_04.gif);
             color: #006633;
             font-weight: bolder;
         }
+        #ContentPlaceHolder1_Image2
+        {
+            width: 100px;
+            height: 100px;
+        }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
- <div id="main">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div id="main">
         <div id="leftinf" class="left">
             <p>
-                <asp:Label ID="Label1" runat="server" Text=""></asp:Label></p>
+                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+            </p>
             <span>姓名：</span>
             <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="姓名不允许为空！"
@@ -98,11 +125,13 @@
             </p>
             <p>
                 <span>年龄：</span>
-                <asp:TextBox ID="txtage" runat="server"></asp:TextBox></p>
+                <asp:TextBox ID="txtage" runat="server"></asp:TextBox>
+            </p>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtage"
                 ErrorMessage="请输入数字（除了数值0）" ValidationExpression="[1-9]+(\d)*" Display="Dynamic"></asp:RegularExpressionValidator>
             <p>
-                <span>请选择该生的所在系：</span></p>
+                <span>请选择该生的所在系：</span>
+            </p>
             <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1"
                 DataTextField="所在系" DataValueField="所在系" AppendDataBoundItems="True">
                 <asp:ListItem Value="null">—请选择系别—</asp:ListItem>
@@ -122,9 +151,21 @@
             <hr />
         </div>
         <div>
+            <asp:FileUpload ID="FileUpload1" runat="server" Width="243px"  onchange="checkSize(this)"/>
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:Button ID="Button2" runat="server" Text="上传" Style="height: 27px" OnClick="Button2_Click" />
+            <br />
+            <!--
+            <asp:Image ID="Image2" runat="server" ImageUrl="images/ivitan.png" /><br />-->
+            <asp:Label ID="Label2" runat="server"></asp:Label>
+        </div>
+        <hr />
+        <div>
             <asp:Button ID="Button1" runat="server" Text="确定" CssClass="anniu1" OnClick="Button1_Click" />
-            <a href="Default.aspx">
-                <img src="images/user.png" width="101" height="101" border="0" class="anniu" /></a></div>
+            <!--
+            <a href="www.vitan.me">
+                <img src="images/user.png" width="101" height="101" border="0" class="anniu" /></a>
+                -->
+        </div>
     </div>
 </asp:Content>
-
