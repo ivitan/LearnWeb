@@ -1,0 +1,62 @@
+﻿body,p,div,h1,h2,h3,h4,h5,ul,li   
+{
+    margin:0px; padding:0px; 
+    font-family:微软雅黑;      
+    color:#444;
+}
+
+
+.fl{ float:left;} .fr{ float:right;} .clr{ clear:both;}
+
+
+
+
+/*左右两列布局,左130PX; 右620px; 间距:10px; 总和:760px*/
+#div_menu
+{ float:left; width:120px; padding:5px;  }
+#div_main
+{ float:right; width:610px; padding:5px 10px 5px 10px;}
+
+
+
+
+
+/*左侧菜单*/
+.title
+{ padding:8px; background-color:#444; color:White;
+  border-top:1px solid #bbb;
+  border-bottom:1px solid #222;  }
+#div_menu ul
+{ list-style-type:none; }
+#div_menu li
+{ padding:6px;  background-color:#666666;
+  border-top:1px solid #aaa;
+  border-bottom:1px solid #333333;  }
+#div_menu a
+{ font-size:14px; 
+  text-decoration:none;
+  color:#dedede; }
+  
+#div_menu li.now a
+{ color:Orange; font-weight:bold;}
+
+#div_menu a:hover
+{ color:Orange;}
+
+
+
+
+/*右侧*/
+
+#div_condition
+{ border:1px solid silver; border-top:none;
+  
+   }
+#div_prod
+{ margin:9px;
+  color:#ddd; }
+
+#div_prod p.moname
+{ padding:3px;}
+#div_prod hr
+{ height:0px;  border:none; border-top:1px solid #dedede;}
