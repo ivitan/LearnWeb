@@ -1,0 +1,40 @@
+﻿* 
+{
+    padding:0;
+    margin:0;
+    
+}
+.box
+{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.item
+{
+    position: absolute;
+    left: 50%;
+    transform: translate( -50%);
+    margin-top:50px;
+    }
+.img
+{
+    float:left;
+}
+.img img
+{
+    width:250px;
+    height:150px;
+}
+
+.info
+{
+    float:left;
+
+}
+
+.clr
+{
+    clear:both;
+}

@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="UTF-8">
-	<title>A tools</title>
-	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
-	<script type="text/javascript" src="js/jquery.a-tools-1.5.2.min.js"></script>
-	<script type="text/javascript">
-		$("#buttononInfo").click(function () {
-			var info = $("#textarea").getSelection();
-			alert("start:" + info.start + "\nEnd:" + info.end + "\nlength：" + info.length + "\nText:" + info.text);
-		});
-		$("#buttonCharacters").click(function () {
-			alert("Characters:" + $("#textarea").countCharacters());
-		});
-		$("#buttonReplace").click(function () {
-			$("#textarea").replaceSelection($("input[name=replaceText]").val());
-		});
-	</script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/jquery.a-tools-1.5.2.min.js"></script>
+		<script>
+			$(function() {
+				$("#buttonInfo").click(function() {
+					var info = $("#textArea").getSelection(); //获取选中文本的信息
+					alert("Start: " + info.start + "\nEnd: " + info.end + "\nLength: " + info.length + "\nText: " + info.text);
+				});
+				$("#buttonCharacters").click(function() {
+					window.alert("characters " + $("#textArea").countCharacters());
+				});
 
-<body>
-	<form action="">
-		<h2>用于测试的 TextArea</h2>
-		<textarea id="textarea" row="10" clos="60"></textarea>
-		<table border="0" cellspacing="" cellpadding="">
+				$("#buttonReplace").click(function() {
+					$("#textArea").replaceSelection($("input[name=replaceText]").val());
+				});
+
+				$("#buttonInput").click(function() {
+					$("#textArea").insertAtCaretPos($("input[name=inputText]").val());
+				});
+
+				$("#buttonLimit").click(function() {
+					$("#textArea").setMaxLength($("input[name=limit]").val(), function() {
+						alert("Max reached.")
+					});
+					if($("input[name=limit]").val() >= 0) {
+						alert("Limit set to: " + $("input[name=limit]").val());
+					} else {
+						alert("No limits");
+					}
+				});
+
+				$("#buttonPosition").click(function() {
+					$("#textArea").setCaretPos($("input[name=position]").val());
+				});
+
+				$("#buttonSetSelection").click(function() {
+					$("#textArea").setSelection($("input[name=startPosition]").val(), $("input[name=endPosition]").val());
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<h1>测试a-tools插件</h1>
+
+		<p> 用于测试的Textarea<br />
+			<textarea id="textArea" rows="10" cols="60"></textarea>
+		</p>
+		<table>
 			<tr>
-				<td>获取选择的内容</td>
+				<td style="width:250px;">获得选择的内容</td>
 				<td><button id="buttonInfo" type="button">获得</button></td>
 			</tr>
 			<tr>
-				<td>获取字符数量</td>
-				<td><button id="buttonCharactors" type="button">获得</button></td>
+				<td>获得字符数量</td>
+				<td><button id="buttonCharacters" type="button">获得</button></td>
 			</tr>
 			<tr>
-				<td>使用下面的文本替换选择的内容</td>
-				<td><input type="" name="" id="" value="" /><button id="buttonReplace" type="button">替换</button></td>
+				<td> 使用下面的文本替换选择的内容</td>
+				<td><input type="text" name="replaceText" style="width:160px;" />
+					<button id="buttonReplace" type="button">替换</button></td>
 			</tr>
 			<tr>
-				<td>在光标位置插入下面文本</td>
-				<td><input type="text" /><button id="buttonInput" type="button">插入</button></td>
+				<td>在光标位置插入下面的文本</td>
+				<td><input type="text" name="inputText" style="width:160px;" />
+					<button id="buttonInput" type="button">插入</button></td>
 			</tr>
 			<tr>
 				<td>设置字符限制</td>
-				<td><input type="text" name="" id="" /><button id="buttonLimit" type="button">设置</button></td>
+				<td><input type="text" name="limit" style="width:40px; text-align:right;" />
+					<button id="buttonLimit" type="button">设置</button><span>&lt;= 0删除限制</span></td>
 			</tr>
 			<tr>
 				<td>设置光标位置</td>
-				<td><button id="buttonPosition" type="button">设置</button>
-					<0 设置到尾部</td> </tr> <tr>
+				<td><input type="text" name="position" style="width:40px; text-align:right;" />
+					<button id="buttonPosition" type="button">设置</button><span>&lt;0 设置到尾部 1 = 开始, -1 = 尾部</span></td>
+			</tr>
+			<tr>
 				<td>设置选择文本的开始和结束</td>
-				<td><input type="" name="" id="" value="" /> to <input type="text" name="" id="" /><button
-						id="buttonSelection" type="button">设置</button></td>
+				<td><input type="text" name="startPosition" style="width:40px; text-align:right;" /> to <input type="text" name="endPosition" style="width:40px; text-align:right;" />
+					<button id="buttonSetSelection" type="button">设置</button><br/></td>
 			</tr>
 		</table>
-	</form>
-</body>
+	</body>
 
 </html>
