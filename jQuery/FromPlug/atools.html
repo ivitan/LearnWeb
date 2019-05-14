@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>A tools</title>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="js/jquery.a-tools-1.5.2.min.js"></script>
+	<script type="text/javascript">
+		$("#buttononInfo").click(function () {
+			var info = $("#textarea").getSelection();
+			alert("start:" + info.start + "\nEnd:" + info.end + "\nlength：" + info.length + "\nText:" + info.text);
+		});
+		$("#buttonCharacters").click(function () {
+			alert("Characters:" + $("#textarea").countCharacters());
+		});
+		$("#buttonReplace").click(function () {
+			$("#textarea").replaceSelection($("input[name=replaceText]").val());
+		});
+	</script>
+</head>
+
+<body>
+	<form action="">
+		<h2>用于测试的 TextArea</h2>
+		<textarea id="textarea" row="10" clos="60"></textarea>
+		<table border="0" cellspacing="" cellpadding="">
+			<tr>
+				<td>获取选择的内容</td>
+				<td><button id="buttonInfo" type="button">获得</button></td>
+			</tr>
+			<tr>
+				<td>获取字符数量</td>
+				<td><button id="buttonCharactors" type="button">获得</button></td>
+			</tr>
+			<tr>
+				<td>使用下面的文本替换选择的内容</td>
+				<td><input type="" name="" id="" value="" /><button id="buttonReplace" type="button">替换</button></td>
+			</tr>
+			<tr>
+				<td>在光标位置插入下面文本</td>
+				<td><input type="text" /><button id="buttonInput" type="button">插入</button></td>
+			</tr>
+			<tr>
+				<td>设置字符限制</td>
+				<td><input type="text" name="" id="" /><button id="buttonLimit" type="button">设置</button></td>
+			</tr>
+			<tr>
+				<td>设置光标位置</td>
+				<td><button id="buttonPosition" type="button">设置</button>
+					<0 设置到尾部</td> </tr> <tr>
+				<td>设置选择文本的开始和结束</td>
+				<td><input type="" name="" id="" value="" /> to <input type="text" name="" id="" /><button
+						id="buttonSelection" type="button">设置</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>

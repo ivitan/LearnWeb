@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"">
+    <link rel=" stylesheet" href="login.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+    <title>login</title>
+    <script type="text/javascript">
+        window.callback = function (res) {
+            console.log(res)
+            // res（未通过验证）= {ret: 1, ticket: null}
+            // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
+            if (res.ret === 0) {
+                // alert(res.ticket)   // 票据
+                console.info('验证通过');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="login-box">
+        <form action="" class="login-form" method="get">
+            <h1>Welcome</h1>
+            <input class="txtb" type="text" name="" placeholder="UserName">
+            <input class="txtb" type="password" name="" placeholder="Password">
+            <button class="login-btn" id="TencentCaptcha" data-appid="2021800203" data-cbfn="callback" type="button">Login</button>
+            <script type="text/javascript">
+                window.callback = function (res) {
+                    console.log(res)
+                    // res（未通过验证）= {ret: 1, ticket: null}
+                    // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
+                    if (res.ret === 0) {
+                        // alert(res.ticket)   // 票据
+                        console.info('验证通过-----');
+                    }
+                }
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="js/jquery.doubleSelect.js"></script>
+	<script>
+		$(document).ready(function () {
+			var selectoptions = {
+				"水果": {
+					"key": 10,
+					"defaultvalue": 212,
+					"values": {
+						"苹果": 210,
+						"橘子": 211,
+						"梨": 212,
+						"草莓": 213
+					}
+				},
+
+				"蔬菜": {
+					"key": 20,
+					"defaultvalue": 111,
+					"values": {
+						"白菜": 110,
+						"芹菜": 111,
+						"韭菜": 112
+					}
+				},
+
+			};
+
+			$('#first').doubleSelect('second', selectoptions);
+		});
+	</script>
+</head>
+
+<body>
+	<div id="main">
+		<h1>
+			jQuery Doubleselect 插件
+		</h1>
+		<form action="index.html">
+
+			<select id="first" name="first" size="1">
+				<option value="">--</option>
+			</select>
+			<select id="second" name="second" size="1">
+				<option value="">--</option>
+			</select>
+
+		</form>
+	</div>
+
+</body>
+
+</html>
