@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title>bind</title>
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+	</head>
+	<body>
+		<input type="" name="name" id="name" value="" />
+		<script>
+			function handler(event){
+				alert(event.data.foo)
+			}
+			$("input").bind("click",{foo:"vitan.me"},handler);
+			//$("input").bind("click",function(){
+			//	alert($(this).val());
+			//);
+		</script>
+	</body>
+</html>

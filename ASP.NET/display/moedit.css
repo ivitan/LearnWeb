@@ -22,10 +22,15 @@
 {
     float:left;
 }
-.img img
-{
-    width:250px;
-    height:150px;
+
+
+#lb_i_img {
+    width: 250px;
+    height: 150px;
+}
+.img img {
+    width: 250px;
+    height: 150px;
 }
 
 .info

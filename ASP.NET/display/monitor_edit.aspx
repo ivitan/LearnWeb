@@ -170,7 +170,7 @@
                 </div>
             </EditItemTemplate>
         </asp:ListView>
-        <asp:AccessDataSource ID="ADS_LV" runat="server" DataFile="~/mdb/EV.mdb" DeleteCommand="DELETE FROM [TB_MONITOR] WHERE [mo_id] = ?"
+        <asp:AccessDataSource ID="ADS_LV" runat="server" DataFile="~/display/mdb/EV.mdb" DeleteCommand="DELETE FROM [TB_MONITOR] WHERE [mo_id] = ?"
             InsertCommand="INSERT INTO [TB_MONITOR] ([mo_seid], [mo_siid], [mo_imgid], [mo_name], [mo_enable], [mo_order], [mo_phdmi], [mo_pvga], [mo_pdvi]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
             SelectCommand="SELECT TB_MONITOR.* , T_SIZE.si_name, T_SERIES.se_name,img_folder+'/'+img_fname as src FROM T_SIZE INNER JOIN (T_SERIES INNER JOIN (T_IMGMNG INNER JOIN TB_MONITOR ON T_IMGMNG.img_id = TB_MONITOR.mo_imgid) ON T_SERIES.se_id = TB_MONITOR.mo_seid) ON T_SIZE.si_id = TB_MONITOR.mo_siid
 WHERE MO_ENABLE=TRUE AND MO_DELETE=FALSE ORDER BY MO_ORDER DESC" UpdateCommand="UPDATE [TB_MONITOR] SET [mo_seid] = ?, [mo_siid] = ?, [mo_imgid] = ?, [mo_name] = ?, [mo_enable] = ?, [mo_order] = ?, [mo_phdmi] = ?, [mo_pvga] = ?, [mo_pdvi] = ? WHERE [mo_id] = ?">
@@ -201,11 +201,11 @@ WHERE MO_ENABLE=TRUE AND MO_DELETE=FALSE ORDER BY MO_ORDER DESC" UpdateCommand="
                 <asp:Parameter Name="mo_id" Type="Int32" />
             </UpdateParameters>
         </asp:AccessDataSource>
-        <asp:AccessDataSource ID="ADS_IMG" runat="server" DataFile="~/mdb/EV.mdb" SelectCommand="SELECT img_id, img_folder + '/' + img_fname AS IMGSRC FROM T_IMGMNG">
+        <asp:AccessDataSource ID="ADS_IMG" runat="server" DataFile="~/display/mdb/EV.mdb" SelectCommand="SELECT img_id, img_folder + '/' + img_fname AS IMGSRC FROM T_IMGMNG">
         </asp:AccessDataSource>
-        <asp:AccessDataSource ID="ads_ddl_si" runat="server" DataFile="~/mdb/EV.mdb" SelectCommand="SELECT [si_id], [si_name] FROM [T_SIZE]">
+        <asp:AccessDataSource ID="ads_ddl_si" runat="server" DataFile="~/display/mdb/EV.mdb" SelectCommand="SELECT [si_id], [si_name] FROM [T_SIZE]">
         </asp:AccessDataSource>
-        <asp:AccessDataSource ID="ads_ddl_se" runat="server" DataFile="~/mdb/EV.mdb" SelectCommand="SELECT [se_id], [se_name] FROM [T_SERIES]">
+        <asp:AccessDataSource ID="ads_ddl_se" runat="server" DataFile="~/display/mdb/EV.mdb" SelectCommand="SELECT [se_id], [se_name] FROM [T_SERIES]">
         </asp:AccessDataSource>
     </div>
     </form>

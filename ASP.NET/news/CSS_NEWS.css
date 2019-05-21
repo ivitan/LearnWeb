@@ -1,0 +1,31 @@
+﻿
+#NewsTTL { text-align:center; padding:8px; border-bottom:1px solid #eaeaea; font-family:"微软雅黑",  "Arial";  color:#533;}
+#NewsDate,#NewsFrom { color:#777; font-size:12px; margin-left:10px;}
+#div_newsHoldr { padding:10px;}
+
+
+.cke_show_borders { font-family:"微软雅黑",  "Arial"; color:#666;}
+
+.tc { text-align:center;}
+.tl { text-align:left;}
+.tr { text-align:right;}
+
+.cke_show_borders h3 { font-size:16px; font-weight:bold; color:#444;}
+
+.cke_show_borders p { font-size:14px; line-height:20px; text-indent:2em;}
+
+.cke_show_borders img  
+{
+    padding:4px; border:
+    1px solid #eaeaea;
+     margin:10px auto;
+     width:200px;
+     height:200px;
+     }
+     
+ #b
+ {
+     width:800px;
+     height:800px;
+ }
+     
