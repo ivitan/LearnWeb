@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>mouse event</title>
+		<script src="js/jquery-2.1.0.js"></script>
+		<style>
+			ul {
+				margin-left: 20px;
+				color: darkolivegreen;
+			}
+			
+			li {
+				cursor: default;
+			}
+			
+			span {
+				color: tomato;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>VITAN</li>
+			<li>VITAN</li>
+			<li class="fade">ME</li>
+			<li class="fade">vitan.me</li>
+		</ul>
+	<script type="text/javascript">
+		$("li").hover {
+			function() {
+				$(thia).append($("<span>***</span>"));
+			},
+			function() {
+				$(this).find("span:last").remove();
+			}
+		};
+		</script>
+	</body>
+</html>

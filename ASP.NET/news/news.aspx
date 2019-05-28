@@ -18,7 +18,7 @@
                     <%#Eval("news_title") %></a></h1>
         </ItemTemplate>
     </asp:ListView>
-    <asp:AccessDataSource ID="ads_news" runat="server" DataFile="~/data/news.mdb"
+    <asp:AccessDataSource ID="ads_news" runat="server" DataFile="data/news.mdb"
         SelectCommand="SELECT *  FROM [T_NEWS]">
     </asp:AccessDataSource>
     </form>

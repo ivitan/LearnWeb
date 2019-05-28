@@ -30,7 +30,7 @@
 
 
         </asp:ListView>
-        <asp:AccessDataSource ID="ads_news" runat="server" DataFile="~/data/news.mdb" 
+        <asp:AccessDataSource ID="ads_news" runat="server" DataFile="data/news.mdb" 
             SelectCommand="SELECT * FROM [T_NEWS] WHERE ([news_id] = ?)">
             <SelectParameters>
                 <asp:QueryStringParameter Name="news_id" 

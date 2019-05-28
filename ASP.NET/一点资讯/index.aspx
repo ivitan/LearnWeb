@@ -122,14 +122,14 @@
                                             <%#Eval("news_title") %></a></h1>
                                     <div class="clear_fix">
                                         <span>
-                                            <img src="./img/little.jpg" alt="" class="user_icon"></span> <span>毛罗聊球</span>
+                                            <img src="/img/little.jpg" alt="" class="user_icon"></span> <span>毛罗聊球</span>
                                         <span>144评</span> <span>刚刚</span> <span class="close">X</span>
                                     </div>
                                 </div>
                             </a></li>
                                 </ItemTemplate>
                             </asp:ListView>
-                            <asp:AccessDataSource ID="ads_news" runat="server" DataFile="~/data/news.mdb" SelectCommand="SELECT *  FROM [T_NEWS]">
+                            <asp:AccessDataSource ID="ads_news" runat="server" DataFile="data/news.mdb" SelectCommand="SELECT *  FROM [T_NEWS]">
                             </asp:AccessDataSource>
                         </ul>
                     </div>
@@ -398,9 +398,9 @@
                 <span class="line"></span><span>第三方平台登录</span> <span class="line"></span>
             </div>
             <div class="login_footer">
-                <img src="./img/新浪.png" alt="">
-                <img src="./img/QQ.png" alt="">
-                <img src="./img/小米.png" alt="">
+                <img src="/img/新浪.png" alt="">
+                <img src="/img/QQ.png" alt="">
+                <img src=./img/小米.png" alt="">
             </div>
         </div>
     </div>

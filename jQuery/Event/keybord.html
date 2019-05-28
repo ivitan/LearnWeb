@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>keybord event</title>
+		<script src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript">
+			function handle(event){
+				alert(event.data.fo);
+			$("taeget").keypress(function(){
+				alert("Handle for .keypress() called");
+			});
+			}
+		</script>
+	</head>
+	<body>
+		<input id="target" type="text" value="按下键" />
+	</body>
+</html>
