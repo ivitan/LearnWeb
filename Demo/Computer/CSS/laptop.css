@@ -1,0 +1,147 @@
+/*
+* Copyright@vitan.me.
+* Author:Vitan
+* Date:2019-11-7
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#menu {
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 66;
+    width: 320px;
+    min-height: 100%;
+    background: #fff;
+    font-family: 'Microsoft YaHei';
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transition: .4s cubic-bezier(.18, .81, .3, .89);
+    transition: .4s cubic-bezier(.18, .81, .3, .89);
+    will-change: transform, -webkit-transform
+}
+
+#menu .brand-wrap {
+    background-size: 100% 100%
+}
+
+#menu .brand {
+    padding: 40px 20px 2em;
+    background: rgba(63, 81, 181, 0.5)
+}
+
+#menu .avatar {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+#menu .introduce {
+    margin: 1em 0 0;
+    color: #fff
+}
+
+#menu .intra {
+    display: inline-block;
+    padding-top: 4px;
+    color: #c5cae9;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#menu .nav {
+    margin: 0;
+    padding: 12px 0;
+    height: 300px;
+    min-height: calc(100% - 115px);
+    list-style: none;
+    line-height: 44px
+}
+
+#menu .nav li {
+    padding: 0 20px
+}
+
+#menu .nav li .icon {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    line-height: inherit
+}
+
+#menu .nav li:hover,
+#menu .nav li.active {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#menu .nav li:hover a,
+#menu .nav li.active a,
+#menu .nav li:hover .icon,
+#menu .nav li.active .icon {
+    color: #3f51b5;
+}
+
+#menu .nav a {
+    display: block;
+    padding-left: 48px;
+    height: 44px;
+    line-height: 44px;
+    font-weight: 500;
+    color: #727272;
+    text-decoration: none;
+}
+
+#menu img {
+    max-width: 100%;
+    border: none;
+}
+
+.top-header {
+    border-radius: 5px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    height: 80px;
+    font-family: 'Microsoft YaHei';
+    background: #3f51b5;
+    -webkit-transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
+    transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
+    z-index: 30
+}
+
+.header-title {
+    font-weight: 400;
+    line-height: 80px;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 6%;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+#info {
+    border-radius: 5px;
+    background: #fff;
+    width: 1800px;
+    height: 800px;
+    margin-top: 80px;
+    margin-right: 50% !important;
+    float: right;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.panel-body {
+    margin-top: 5%;
+    margin-left: 19%;
+}

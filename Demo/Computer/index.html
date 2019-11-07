@@ -1,0 +1,78 @@
+<!--
+    
+ * Copyright@vitan.me.
+ * Author:Vitan
+ * Date:2019-11-7
+ */
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vitan">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="CSS/ivitan.png" />
+    <title>笔记本介绍</title>
+    <link rel="stylesheet" href="CSS/laptop.css">
+    <script type="text/javascript" src="JS/jquery.min.js"></script>
+    <script type="text/javascript" src="JS/jquery.media.js"></script>
+    <script type="text/javascript " src="JS/jquery.metadata.js "></script>
+</head>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(function() {
+            $('.media').media({
+                width: 1500,
+                height: 820
+            });
+        });
+        $(".waves-effect a").click(function() {
+            var pdf = $(this).attr('href');
+            $("iframe").attr("src", pdf);
+            return false;
+        });
+    });
+</script>
+
+<body>
+    <div>
+        <div class="top-header ">
+            <div class="header-title ">笔记本介绍</div>
+        </div>
+        <aside id="menu">
+            <div class="brand-wrap" style="background-image: url(CSS/brand.jpg)">
+                <div class="brand">
+                    <div class="introduce">
+                        <h1 class="name">&nbsp&nbsp&nbsp笔记本电脑型号</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-bar ">
+                <ul class="nav ">
+                    <li class="waves-block waves-effect "><a href="pdf/dell-5300.pdf ">Dell 5300</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/dell-7200.pdf ">Dell 7200</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/dell-7300.pdf ">Dell 7300</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/dell-7400.pdf ">Dell 7400</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/dell-Latitude34003500.pdf ">Dell Latitude 3400 3500</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/dell-precision-3541-spec-sheet-CN.pdf ">Dell Precision 3541</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/HPEliteBook830G65.pdf ">HP EliteBook 830 G6</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/HPEliteBookx360830G6.pdf ">HP EliteBook x360 830 G6</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/HPProBook440G6.pdf ">HP ProBook 440 G6</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/ThinkPad+MIIX525.pdf ">ThinkPad+MIIX525</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/ThinkPad+P1.pdf ">ThinkPad+P1隐士</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/ThinkPad+T490.pdf ">ThinkPad+T49</a></li>
+                    <li class="waves-block waves-effect "><a href="pdf/ThinkPad+X390.pdf ">ThinkPad+X390</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <div id="info ">
+        <div class="panel-body ">
+            <a class="media " href="pdf/dell-5300.pdf "></a>
+        </div>
+    </div>
+</body>
+
+</html>
